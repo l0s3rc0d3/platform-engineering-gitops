@@ -1,5 +1,8 @@
 external-secrets:
   installCRDs: true
+  webhook:
+    certManager:
+      enabled: false
 
   nodeSelector:
     team: "platform-engineering"
