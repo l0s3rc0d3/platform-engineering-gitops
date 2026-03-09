@@ -1,0 +1,19 @@
+external-secrets:
+  installCRDs: true
+
+  nodeSelector:
+    team: "platform-engineering"
+    workload: "critical"
+
+  tolerations:
+    - key: "team"
+      operator: "Equal"
+      value: "platform-engineering"
+      effect: "NoSchedule"
+
+  resources:
+    requests:
+      cpu: 10m
+      memory: 96Mi
+    limits:
+      memory: 256Mi
