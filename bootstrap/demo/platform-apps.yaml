@@ -31,7 +31,7 @@ spec:
           ignoreMissingValueFiles: true
           valueFiles:
             - values.yaml         
-            - override.{{env}}.yaml     
+            - ./overrides/override.{{env}}.yaml     
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{path.basename}}"
